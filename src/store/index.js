@@ -1,4 +1,4 @@
-import { legacy_createStore as createStore, combineReducers } from 'redux';
+import { legacy_createStore as createStore, combineReducers, compose } from 'redux';
 import heroes from '../reducers/heroes';
 import filters from '../reducers/filters';
 
