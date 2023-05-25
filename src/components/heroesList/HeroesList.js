@@ -13,7 +13,15 @@ import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
 
 const HeroesList = () => {
-  const { filteredHeroes, heroesLoadingStatus } = useSelector(state => state);
+  const filteredHeroes = useSelector(({ filters, heroes }) => {
+    if (filters.activeFilter === 'all') {
+      return heroes.heroes
+    } else {
+      return heroes.heroes.filter(item => item.element === filters.activeFilter)
+    }
+  })
+
+  const heroesLoadingStatus = useSelector(state => state.heroes.heroesLoadingStatus);
   const dispatch = useDispatch();
   const { request } = useHttp();
 
