@@ -6,9 +6,7 @@ import { createSelector } from 'reselect';
 import { AnimatePresence } from "framer-motion";
 
 import {
-  heroesFetching,
-  heroesFetched,
-  heroesFetchingError,
+  fetchHeroes,
   heroesDeleteItem
 } from '../../actions';
 
@@ -52,11 +50,7 @@ const HeroesList = () => {
   }, [request])
 
   useEffect(() => {
-    dispatch(heroesFetching());
-    request("http://localhost:3001/heroes")
-      .then(data => dispatch(heroesFetched(data)))
-      .catch(() => dispatch(heroesFetchingError()))
-
+    dispatch(fetchHeroes(request))
     // eslint-disable-next-line
   }, []);
 
