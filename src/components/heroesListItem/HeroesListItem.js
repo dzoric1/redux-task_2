@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 const HeroesListItem = ({ name, description, element, onDelete }) => {
 
   let elementClassName;
@@ -20,8 +21,12 @@ const HeroesListItem = ({ name, description, element, onDelete }) => {
   }
 
   return (
-    <li
-      className={`card flex-row mb-4 shadow-lg text-white ${elementClassName}`}>
+    <motion.li
+      className={`card flex-row mb-4 shadow-lg text-white ${elementClassName}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <img src="http://www.stpaulsteinbach.org/wp-content/uploads/2014/09/unknown-hero.jpg"
         className="img-fluid w-25 d-inline"
         alt="unknown hero"
@@ -39,7 +44,7 @@ const HeroesListItem = ({ name, description, element, onDelete }) => {
           onClick={onDelete}
         ></button>
       </span>
-    </li>
+    </motion.li>
   )
 }
 

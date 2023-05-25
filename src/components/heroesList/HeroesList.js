@@ -3,6 +3,8 @@ import { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
 
+import { AnimatePresence } from "framer-motion";
+
 import {
   heroesFetching,
   heroesFetched,
@@ -77,7 +79,9 @@ const HeroesList = () => {
   const elements = renderHeroesList(filteredHeroes);
   return (
     <ul>
-      {elements}
+      <AnimatePresence>
+        {elements}
+      </AnimatePresence>
     </ul>
   )
 }
