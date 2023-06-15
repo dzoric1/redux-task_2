@@ -7,7 +7,7 @@ import {
   filtersFetchingError,
   filtersFetching,
   activeFilterChanged
-} from "../../actions"
+} from "./filtersSlice"
 
 import Spinner from "../spinner/Spinner"
 

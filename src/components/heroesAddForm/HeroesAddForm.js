@@ -2,7 +2,7 @@ import { useState, } from "react";
 import { useHttp } from "../../hooks/http.hook";
 import { v4 as uuidv4 } from 'uuid'
 import { useDispatch, useSelector } from 'react-redux';
-import { heroesAddItem } from "../../actions";
+import { heroesAddItem } from "../heroesList/heroesSlice";
 
 const HeroesAddForm = () => {
 

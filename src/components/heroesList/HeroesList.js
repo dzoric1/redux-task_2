@@ -5,10 +5,8 @@ import { createSelector } from 'reselect';
 
 import { AnimatePresence } from "framer-motion";
 
-import {
-  fetchHeroes,
-  heroesDeleteItem
-} from '../../actions';
+import { fetchHeroes } from '../../actions';
+import { heroesDeleteItem } from './heroesSlice';
 
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
