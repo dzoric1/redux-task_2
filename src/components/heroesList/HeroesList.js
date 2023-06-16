@@ -5,7 +5,7 @@ import { createSelector } from '@reduxjs/toolkit';
 
 import { AnimatePresence } from "framer-motion";
 
-import { heroesDeleteItem, fetchHeroes } from './heroesSlice';
+import { heroesDeleteItem, fetchHeroes, selectAll } from './heroesSlice';
 
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from '../spinner/Spinner';
@@ -14,7 +14,7 @@ const HeroesList = () => {
 
   const filteredHeroesSelector = createSelector(
     (state) => state.filters.activeFilter,
-    (state) => state.heroes.heroes,
+    selectAll,
     (filter, heroes) => {
       if (filter === 'all') {
         return heroes

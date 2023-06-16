@@ -13,52 +13,45 @@
       "element": "wind"
     },
     {
-      "id": "946e978c-0c70-4471-a1f4-f4050a29a5d3",
+      "id": "a23d6e13-87fd-41b4-a20b-b1d403983ec4",
       "name": "fgh",
       "description": "fgh",
       "element": "earth"
     },
     {
-      "id": "7a77c022-c216-46ce-91af-fb930eb0dec6",
+      "id": "94c69113-9525-4c6b-94ea-eff13f25c56a",
       "name": "123",
-      "description": "asd",
-      "element": "fire"
-    },
-    {
-      "id": "47d8cf2d-033f-412b-858f-ee2ea3b222a4",
-      "name": "asd",
-      "description": "asd",
-      "element": "fire"
-    },
-    {
-      "id": "5ab84c29-e49e-454c-af7c-b0396ae04abd",
-      "name": "dfg",
-      "description": "dfb",
+      "description": "123",
       "element": "fire"
     }
   ],
   "filters": [
     {
+      "id": "all",
       "name": "all",
       "label": "Все",
       "className": "btn-outline-dark"
     },
     {
+      "id": "fire",
       "name": "fire",
       "label": "Огонь",
       "className": "btn-danger"
     },
     {
+      "id": "water",
       "name": "water",
       "label": "Вода",
       "className": "btn-primary"
     },
     {
+      "id": "wind",
       "name": "wind",
       "label": "Ветер",
       "className": "btn-success"
     },
     {
+      "id": "earth",
       "name": "earth",
       "label": "Земля",
       "className": "btn-secondary"
